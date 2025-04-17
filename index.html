@@ -3,28 +3,102 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Audio Vibes</title>
+  <meta name="description" content="Audio Vibes - Sound Equipment Rental, setup and management for small and mid-size venues in OC and LA area"/>
+  <meta name="keywords" content="sound equipment, audio rental, venue setup, OC, LA, audio services"/>
+  <meta property="og:title" content="Audio Vibes" />
+  <meta property="og:description" content="Sound Equipment Rental, setup and manage all you audio needs for small and mid size venues in OC and LA area" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
+  <title>Audio Vibes | Sound Equipment Rental</title>
   <style>
+    :root {
+      --coral: #ff6f61;
+    }
     html, body {
       margin: 0;
       height: 100%;
-      min-height: 100vh;
+      min-height: 100dvh; /* Modern viewport height */
       background: #000;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow-x: hidden;
     }
     h1 {
       color: #fff;
-      font-family: sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       font-size: clamp(2rem, 10vw, 5rem);
       padding: 0 1rem;
       text-align: center;
       margin: 0;
+      animation: fadeIn 1.2s ease-in-out;
+      letter-spacing: 0.03em;
+    }
+    .description {
+      color: var(--coral);
+      font-family: Georgia, Times, 'Times New Roman', serif;
+      font-size: clamp(1.2rem, 5vw, 2.5rem);
+      text-align: center;
+      max-width: 800px;
+      line-height: 1.4;
+      margin-top: 2rem;
+      padding: 0 1.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .contact {
+      color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin-top: 5rem;
+      text-align: center;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      animation: fadeIn 1.8s ease-in-out;
+    }
+    .contact-name {
+      display: inline-block;
+      margin-right: 1rem;
+      font-weight: 600;
+    }
+    .phone-link {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .phone-link:hover, .phone-link:focus {
+      color: var(--coral);
+    }
+    @media (max-width: 600px) {
+      .contact-item {
+        display: block;
+        margin-bottom: 0.8rem;
+      }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>audio vibes</h1>
+  <main>
+    <header>
+      <h1>audio vibes</h1>
+    </header>
+    <p class="description">Sound Equipment Rental, setup and manage all you audio needs for small and mid size venues in OC and LA area</p>
+    <footer class="contact">
+      <div class="contact-item">
+        <span class="contact-name">Baba</span> <a href="tel:4084546280" class="phone-link">(408)454-6280</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-name">Vinny</span> <a href="tel:8185647501" class="phone-link">(818)564-7501</a>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
